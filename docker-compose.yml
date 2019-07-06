@@ -1,0 +1,21 @@
+version: "2"
+
+services:
+  server:
+    build: "."
+    volumes:
+      - .:/motobike
+    ports:
+      - 3000:3000
+    env_file:
+      - servermotobike.env
+    links:
+      - mariaDatabase
+  mariaDatabase:
+    image: "mariadb:latest"
+    env_file:
+      - servermotobike.env
+    environment:
+        - MYSQL_RANDOM_ROOT_PASSWORD=yes
+    ports:
+        - 3301:3306
