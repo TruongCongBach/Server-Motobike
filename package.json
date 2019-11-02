@@ -19,7 +19,7 @@
   "homepage": "https://github.com/TruongCongBach/Server-Motobike#readme",
   "dependencies": {
     "dotenv": "^8.0.0",
-    "knex": "^0.18.3",
+    "knex": "^0.19.5",
     "koa": "^2.7.0",
     "mysql": "^2.17.1"
   }
